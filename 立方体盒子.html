@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立方体盒子效果</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        
+        .box {
+            position: relative;
+            top: 500px;
+            left: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(-30deg);
+            /* animation: ro 10s linear infinite; */
+        }
+        
+        .box div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .box :first-child {
+            background-color: pink;
+        }
+        
+        .box :nth-child(2) {
+            background-color: blue;
+            transform: translate3d(0, 0, -200px) rotateY(180deg);
+        }
+        
+        .box :nth-child(3) {
+            background-color: skyblue;
+            transform: translate3d(-50%, 0, -100px) rotateY(-90deg);
+        }
+        
+        .box :nth-child(4) {
+            background-color: blue;
+            transform: translate3d(50%, 0, -100px) rotateY(90deg);
+        }
+        
+        .box :nth-child(5) {
+            background-color: purple;
+            transform: translate3d(0, -50%, -100px) rotateX(90deg);
+        }
+        
+        .box :nth-child(6) {
+            background-color: green;
+            transform: translate3d(0, 50%, -100px) rotateX(-90deg);
+        }
+        /* @keyframes ro {
+            0% {
+                transform: rotateY(90deg);
+            }
+            100% {
+                transform: rotateY(180deg);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>01-前面</div>
+        <div>02-后面</div>
+        <div>03-左面</div>
+        <div>04-右面</div>
+        <div>05-上面</div>
+        <div>06-下面</div>
+    </div>
+</body>
+
+</html>
