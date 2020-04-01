@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热点图</title>
+    <style>
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            background: #000 url(media/map.png) no-repeat;
+            margin: 200px auto;
+        }
+        
+        .city {
+            position: absolute;
+            top: 232px;
+            right: 201px;
+        }
+        
+        .city div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+        }
+        
+        .city .spot {
+            background-color: skyblue;
+            border-radius: 50%;
+        }
+        
+        .city div[class^="pluse"] {
+            border-radius: 50%;
+            animation: hot 1.2s linear infinite;
+            box-shadow: 0 0 12px #009dfd;
+        }
+        
+        .map .city .pluse2 {
+            animation-delay: 0.4s;
+        }
+        
+        .map .city .pluse3 {
+            animation-delay: 0.8s;
+        }
+        
+        .tb {
+            position: absolute;
+            top: 502px;
+            right: 87px;
+        }
+        
+        .gz {
+            position: absolute;
+            top: 545px;
+            right: 199px;
+        }
+        
+        @keyframes hot {
+            0% {
+                opacity: 1;
+            }
+            70% {
+                width: 40px;
+                height: 40px;
+            }
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="spot"></div>
+            <div class="pluse1"></div>
+            <div class="pluse2"></div>
+            <div class="pluse3"></div>
+        </div>
+        <div class="city tb">
+            <div class="spot"></div>
+            <div class="pluse1"></div>
+            <div class="pluse2"></div>
+            <div class="pluse3"></div>
+        </div>
+        <div class="city gz">
+            <div class="spot"></div>
+            <div class="pluse1"></div>
+            <div class="pluse2"></div>
+            <div class="pluse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

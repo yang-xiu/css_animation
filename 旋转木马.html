@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转木马叮叮当</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        
+        .rotatehourse {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 200px auto;
+            animation: hourse 6s linear infinite
+        }
+        
+        div[class^="p"] {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: url(media/dog.jpg) no-repeat;
+        }
+        
+        .mid {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: url(media/pig.jpg) no-repeat;
+            background-size: contain;
+        }
+        
+        .rotatehourse .p1 {
+            transform: translateZ(400px);
+        }
+        
+        .rotatehourse .p2 {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+        
+        .rotatehourse .p3 {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+        
+        .rotatehourse .p4 {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        
+        .rotatehourse .p5 {
+            transform: rotateY(240deg) translateZ(400px);
+        }
+        
+        .rotatehourse .p6 {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+        
+        @keyframes hourse {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotatehourse">
+        <div class="mid"></div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+        <div class="p3"></div>
+        <div class="p4"></div>
+        <div class="p5"></div>
+        <div class="p6"></div>
+    </div>
+</body>
+
+</html>
